@@ -17,7 +17,7 @@ body {
     height: 100vh;
     margin: 0;
 }
-
+/*  */
 form {
     background-color: #ffffff; /* Form background */
     padding: 20px;
@@ -57,7 +57,7 @@ input[type="submit"]:hover {
 
 </style>
 <body>
-    <form action="test.php" method="POST">
+    <!-- <form action="test.php" method="POST">
         <label for="name">Name:</label>
         <input type="text" id="name" name="name"><br>
         <label for="age">Age:</label>
@@ -65,7 +65,7 @@ input[type="submit"]:hover {
         <label for="email">Email</label>
         <input type="email" name="email"><br>
         <label for="password">password:</label>
-        <input type="password" id="password" name="password"><br>
+        <input type="password" id="password" name="password"><br> -->
         <!-- <label for="gender">Gender:</label>
         <label for="male"> Male</label>
         <input type="radio"  id="male" name="gender" value="male"> 
@@ -74,9 +74,9 @@ input[type="submit"]:hover {
         <label for="comment">Comment:</label> <br>
         <textarea name="textarea" id="textarea" cols="30" rows="10"></textarea> <br> -->
 
-        <input type="submit" value="Submit">
+        <!-- <input type="submit" value="Submit">
         
-    </form>
+    </form> -->
     
 </body>
 </html>
