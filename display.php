@@ -8,8 +8,8 @@
 <body>
     
 <?php
-$connection=mysqli_connect("localhost","root","","employ");
-$sql_quer= "SELECT * FROM emp_detail";
+$connection=mysqli_connect("localhost","root","","students");
+$sql_quer= "SELECT * FROM std_details";
 $run = mysqli_query($connection,$sql_quer);
 if(mysqli_num_rows($run)>0){
 
@@ -35,10 +35,10 @@ if(mysqli_num_rows($run)>0){
         <td><?php echo $data['User name']; ?></td>
         <td><?php echo $data['Email']; ?></td>
         <td><?php echo $data['password']; ?></td>
+        <td><?php echo $data['Age']; ?></td>
         <td><?php echo $data['Phone']; ?></td>
-        <td><?php echo $data['age']; ?></td>
 
-        <td><a href="">edit</a></td>
+        <td><a href="edit.php?id=<?php echo $data['Id'];?>">Edit</a></td>
         <td><a href="">delete</a></td>
     </tr>
      <?php }?>
@@ -46,7 +46,7 @@ if(mysqli_num_rows($run)>0){
 </table>
 <br><br>
 
-<a href="connection.php"><button>add new </button></a>
+<a href="form_connection.php"><button>add new </button></a>
 <?php }?>
 
 </body>
