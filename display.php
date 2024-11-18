@@ -39,7 +39,7 @@ if(mysqli_num_rows($run)>0){
         <td><?php echo $data['Phone']; ?></td>
 
         <td><a href="edit.php?id=<?php echo $data['Id'];?>">Edit</a></td>
-        <td><a href="">delete</a></td>
+        <td><a href="delete.php?id=<?php echo $data['Id'];?>">delete</a></td>
     </tr>
      <?php }?>
   </tbody>
