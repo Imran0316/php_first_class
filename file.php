@@ -14,7 +14,12 @@
 
         $file_name=$_FILES['image']['name'];
         $file_temp=$_FILES['image']['tmp_name'];
-        move_uploaded_file($file_temp, "gallery/". $file_name);
+       $uploded= move_uploaded_file($file_temp, "gallery/". $file_name);
+        if($uploded){
+            echo "file uploaded";
+        }else{
+            echo "file doen't uploaded";
+        }
         //  echo $file_name;
         //  echo $file_temp;
 
