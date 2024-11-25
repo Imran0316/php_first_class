@@ -10,10 +10,19 @@
 <?php
 $connection=mysqli_connect("localhost","root","","students");
 $sql_quer= "SELECT * FROM std_details";
+if(isset($_GET["sub"])){
+  $sql_quer= "SELECT * FROM std_details WHERE id=" . $_GET["search"];
+}
 $run = mysqli_query($connection,$sql_quer);
 if(mysqli_num_rows($run)>0){
 
 ?>
+
+<form action="" method="$_GET">
+  <label for="">search by id</label>
+  <input type="number" name="search" value="0">
+  <input type="submit" value="search" name="sub" >
+</form>
 
 
 <table>
@@ -28,6 +37,7 @@ if(mysqli_num_rows($run)>0){
     </tr>
   </thead>
   <tbody>
+
     <?php
     while($data= mysqli_fetch_assoc($run)){
     ?>
@@ -35,11 +45,11 @@ if(mysqli_num_rows($run)>0){
         <td><?php echo $data['User name']; ?></td>
         <td><?php echo $data['Email']; ?></td>
         <td><?php echo $data['password']; ?></td>
-        <td><?php echo $data['Age']; ?></td>
+        <td><?php echo $data['age']; ?></td>
         <td><?php echo $data['Phone']; ?></td>
 
-        <td><a href="edit.php?id=<?php echo $data['Id'];?>">Edit</a></td>
-        <td><a href="delete.php?id=<?php echo $data['Id'];?>">delete</a></td>
+        <td><a href="edit.php?id=<?php echo $data['id'];?>">Edit</a></td>
+        <td><a href="delete.php?id=<?php echo $data['id'];?>">delete</a></td>
     </tr>
      <?php }?>
   </tbody>

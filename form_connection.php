@@ -38,6 +38,7 @@ $quer= "INSERT INTO `std_details`( `User name`, `Email`, `password`, `Age`, `Pho
 $run=mysqli_query($connection,$quer);
 if($run){
     echo " <script>alert('connected')</script>";
+    header("Location:display.php");
 }else{
     echo " <script>alert('not connected')</script>";
 
