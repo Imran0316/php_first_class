@@ -25,7 +25,7 @@ if(mysqli_num_rows($run)>0){
 </form>
 
 
-<table>
+<table border="1" cellpadding="10px">
   <thead>
     <tr>
         <th>Username</th>
